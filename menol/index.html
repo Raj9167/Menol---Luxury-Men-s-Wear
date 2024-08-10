@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MENOL - Luxury Men's Wear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">MENOL</div>
+        <nav class="nav">
+            <ul>
+                <li><a href="#collections">Collections</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#stores">Stores</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Discover the Art of Men's Luxury</h1>
+            <p>Exquisite Craftsmanship. Timeless Style.</p>
+            <a href="#collections" class="cta-button">Explore Collections</a>
+        </div>
+    </section>
+    <section id="offers" class="offers-slider">
+        <div class="slider">
+            <div class="slide">Special Offer: 20% off on all suits!</div>
+            <div class="slide">Exclusive: Buy one, get one free on selected items!</div>
+            <div class="slide">New Arrivals: Free shipping on orders over $200!</div>
+        </div>
+    </section>
+    <section id="collections" class="featured-collection">
+        <div class="collection-item">
+            <img src="spring.jpg" alt="Spring/Summer 2024">
+            <div class="collection-text">
+                <h2>Spring/Summer 2024</h2>
+                <p>A fusion of modern elegance and timeless tradition</p>
+                <a href="#shop" class="cta-button">View Collection</a>
+            </div>
+        </div>
+        <div class="collection-item">
+            <img src="autumn.jpg" alt="Autumn/Winter 2024">
+            <div class="collection-text">
+                <h2>Autumn/Winter 2024</h2>
+                <p>Elegance in every stitch</p>
+                <a href="#shop" class="cta-button">View Collection</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="about-menol">
+        <div class="about-text">
+            <h2>Our Story</h2>
+            <p>MENOL is dedicated to crafting the finest in men's luxury wear. Our philosophy blends contemporary design with classic tailoring techniques, ensuring that every piece is a masterpiece.</p>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
+    
+    <section class="exclusive-services">
+        <div class="service">
+            <img src="tailor.jpg">
+            <h3>Personal Tailoring</h3>
+            <p>Custom fits for the discerning gentleman.</p>
+        </div>
+        <div class="service">
+            <img src="cons.jpg">
+            <h3>Style Consultation</h3>
+            <p>Expert advice to elevate your wardrobe.</p>
+        </div>
+        <div class="service">
+            <img src="mem.jpg.webp">
+            <h3>VIP Membership</h3>
+            <p>Exclusive access to new collections and private events.</p>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-left">
+            <ul>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#journal">Journal</a></li>
+                <li><a href="#stores">Stores</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <div class="footer-center">
+            <a href="#"><img src="ig.png" alt="Instagram"></a>
+            <a href="#"><img src="fb.png" alt="Facebook"></a>
+            <a href="#"><img src="tweet.png" alt="Twitter"></a>
+        </div>
+        <div class="footer-right">
+            <p>Stay Updated with MENOL</p>
+            <form>
+                <input type="email" placeholder="Enter your email">
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        showSlide(currentSlide);
+    }
+
+    showSlide(currentSlide);
+    setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+
+    </script>
+</body>
+</html>
